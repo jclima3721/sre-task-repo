@@ -56,5 +56,5 @@ groups:
         labels:
           severity: warning
         annotations:
-          description: "Pod {{ $labels.namespace }}/{{ $labels.pod }} has been in a non-ready state for longer than 2 minutes."
+          description: "Pod {{ $labels.namespace }}/{{ $labels.pod }} has been in a non-ready state for longer than 5 minutes."
           summary: "Pod has been in a non-ready state for more than 2 minutes."
