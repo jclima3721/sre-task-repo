@@ -41,7 +41,7 @@ groups:
   # (d) Kube Pod Crash Looping Alert
       # Alert if any Kubernetes pod is restarting more than once every 5 minutes
       - alert: KubePodCrashLooping
-        expr: rate(kube_pod_container_status_restarts_total{job="kubernetes-service-endpoints",namespace=~".*"}[5m]) * 60 * 5 > 1
+        expr: rate(kube_pod_container_status_restarts_total{job="kubernetes-service-endpoints",namespace=~".*"}[5m]) * 60 * 5 > 0
         for: 2m  # Condition must be true before firing the alert.
         labels:
           severity: warning
